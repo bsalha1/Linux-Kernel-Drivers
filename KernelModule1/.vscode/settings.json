@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "init.h": "c",
+        "compiler_types.h": "c",
+        "compiler.h": "c",
+        "module.h": "c",
+        "kernel.h": "c",
+        "moduleparam.h": "c"
+    }
+}
