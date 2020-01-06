@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "blkdev.h": "c",
+        "blk-mq.h": "c",
+        "err.h": "c",
+        "kernel.h": "c"
+    }
+}
