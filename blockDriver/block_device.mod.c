@@ -26,6 +26,11 @@ static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
 	{ 0x25a444ff, "module_layout" },
+	{ 0x94fc512, "put_disk" },
+	{ 0x51a79620, "del_gendisk" },
+	{ 0x37a0cba, "kfree" },
+	{ 0x3f5a1257, "blk_mq_free_tag_set" },
+	{ 0x18a08b68, "blk_cleanup_queue" },
 	{ 0xb5a459dc, "unregister_blkdev" },
 	{ 0x2c5c32f6, "device_add_disk" },
 	{ 0x6bdfe9e6, "__alloc_disk_node" },
@@ -34,13 +39,17 @@ __attribute__((section("__versions"))) = {
 	{ 0xf02216ad, "kmem_cache_alloc_trace" },
 	{ 0x1148c8a, "kmalloc_caches" },
 	{ 0x71a50dbc, "register_blkdev" },
+	{ 0x56470118, "__warn_printk" },
 	{ 0xa047b91, "__blk_mq_end_request" },
 	{ 0x3d456bca, "blk_update_request" },
-	{ 0x56470118, "__warn_printk" },
 	{ 0x7cd8d75e, "page_offset_base" },
 	{ 0x97651e6c, "vmemmap_base" },
+	{ 0x69acdf38, "memcpy" },
 	{ 0x2568395b, "blk_mq_start_request" },
-	{ 0xc5850110, "printk" },
+	{ 0xdecd0b29, "__stack_chk_fail" },
+	{ 0xfb481954, "vprintk" },
+	{ 0x656e4a6e, "snprintf" },
+	{ 0x754d539c, "strlen" },
 	{ 0xbdfb6dbb, "__fentry__" },
 };
 
