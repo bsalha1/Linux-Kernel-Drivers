@@ -39,6 +39,7 @@ __attribute__((section("__versions"))) = {
 	{ 0xf02216ad, "kmem_cache_alloc_trace" },
 	{ 0x1148c8a, "kmalloc_caches" },
 	{ 0x71a50dbc, "register_blkdev" },
+	{ 0x55129c3, "current_task" },
 	{ 0x56470118, "__warn_printk" },
 	{ 0xa047b91, "__blk_mq_end_request" },
 	{ 0x3d456bca, "blk_update_request" },
@@ -58,3 +59,5 @@ __used
 __attribute__((section(".modinfo"))) =
 "depends=";
 
+
+MODULE_INFO(srcversion, "0FF15FAB6064A6A539DC16F");

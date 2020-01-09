@@ -6,6 +6,8 @@
 #include <errno.h>
 #include <sys/ioctl.h>
 
+#include "ioctl.h"
+
 #define DEVICE "/dev/vbdev"
 
 int main()
@@ -24,12 +26,13 @@ int main()
     fprintf(stdout, "r = read from device\n");
     fprintf(stdout, "w = write to device\n");
     
-    /*
+    
     fprintf(stdout, "0 = handshake\n");
     fprintf(stdout, "1 = get major number\n");
     fprintf(stdout, "2 = get minor number\n");
-    fprintf(stdout, "3 = get remaining write size\n");
-    */
+    fprintf(stdout, "3 = get remaining size\n");
+    fprintf(stdout, "4 = get PID of driver\n");
+    
     fprintf(stdout, "Enter command: ");
     fscanf(stdin, "%c", &ch);
 
@@ -46,7 +49,6 @@ int main()
             fprintf(stdout, "Device: %s\n", read_buf);
             break;
 
-        /*
 	    case '0':
             ioctl_ret = ioctl(fd, HANDSHAKE);
 	        if(ioctl_ret < 0)
@@ -78,7 +80,7 @@ int main()
             break;
 
         case '3':
-            ioctl_ret = ioctl(fd, GET_REMAINING_SIZE);
+            ioctl_ret = ioctl(fd, GET_REMAINING_SPACE);
 	        if(ioctl_ret < 0)
             {
                 fprintf(stdout, "Ioctl failed to send\n");
@@ -86,7 +88,17 @@ int main()
             }
 	        fprintf(stdout, "Return: %ld\n", ioctl_ret);
             break;
-        */
+
+        case '4':
+            ioctl_ret = ioctl(fd, GET_PID);
+	        if(ioctl_ret < 0)
+            {
+                fprintf(stdout, "Ioctl failed to send\n");
+                break;
+            }
+	        fprintf(stdout, "Return: %ld\n", ioctl_ret);
+            break;
+
         default:
             fprintf(stdout, "Command not recognized\n");
             break;

@@ -993,6 +993,10 @@ deps_/root/Documents/kernel/blockDriver/block_device.o := \
   /usr/src/linux-headers-5.3.0-kali3-common/include/linux/blk-mq.h \
   /usr/src/linux-headers-5.3.0-kali3-common/include/linux/sbitmap.h \
   /usr/src/linux-headers-5.3.0-kali3-common/include/uapi/linux/hdreg.h \
+  /root/Documents/kernel/blockDriver/enums.h \
+  /root/Documents/kernel/blockDriver/device_operations.h \
+  /root/Documents/kernel/blockDriver/print.h \
+  /root/Documents/kernel/blockDriver/ioctl.h \
 
 /root/Documents/kernel/blockDriver/block_device.o: $(deps_/root/Documents/kernel/blockDriver/block_device.o)
 
