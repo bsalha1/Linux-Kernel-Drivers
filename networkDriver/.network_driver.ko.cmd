@@ -1,0 +1,1 @@
+cmd_/root/Documents/kernel/networkDriver/network_driver.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux-headers-5.3.0-kali3-common/scripts/module-common.lds --build-id  -o /root/Documents/kernel/networkDriver/network_driver.ko /root/Documents/kernel/networkDriver/network_driver.o /root/Documents/kernel/networkDriver/network_driver.mod.o ;  true
