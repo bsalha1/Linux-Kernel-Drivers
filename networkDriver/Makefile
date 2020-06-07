@@ -1,9 +1,9 @@
 obj-m += network_driver.o
 
-KDIR = /usr/src/linux-headers-5.3.0-kali3-amd64
+KDIR = /lib/modules/$(shell uname -r)/build
 
 all:
-	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+	make -C $(KDIR) M=$(PWD) modules
 
 clean:
-	rm -rf -v *.o *.ko *.mod.* *.symvers *.order
+	make -C $(KDIR) M=$(PWD) clean

@@ -1,9 +1,9 @@
-obj-m += usbDriver.o
+obj-m += usb_driver.o
 
-KDIR = /usr/src/linux-headers-5.2.0-kali3-amd64
+KDIR = /lib/modules/$(shell uname -r)/build
 
 all:
-	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+	make -C $(KDIR) M=$(PWD) modules
 
 clean:
-	rm -rf *.o *.ko *.mod.* *.symvers *.order
+	make -C $(KDIR) M=$(PWD) clean

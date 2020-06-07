@@ -1,1 +1,0 @@
-cmd_/root/Documents/kernel/usbDevice/usbDriver.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux-headers-5.2.0-kali3-common/scripts/module-common.lds  --build-id  -o /root/Documents/kernel/usbDevice/usbDriver.ko /root/Documents/kernel/usbDevice/usbDriver.o /root/Documents/kernel/usbDevice/usbDriver.mod.o ;  true

@@ -1,1 +1,0 @@
-cmd_/root/Documents/kernel/charDriver/char_device.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000 -T /usr/src/linux-headers-5.3.0-kali3-common/scripts/module-common.lds --build-id  -o /root/Documents/kernel/charDriver/char_device.ko /root/Documents/kernel/charDriver/char_device.o /root/Documents/kernel/charDriver/char_device.mod.o ;  true
